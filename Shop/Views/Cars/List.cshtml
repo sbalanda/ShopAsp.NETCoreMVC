@@ -1,12 +1,16 @@
 ﻿<h1>Все автомобили</h1>
 <h3>@Model.CurrCategory</h3>
-@{ 
-    foreach (var car in Model.AllCars)
-    {
-    <div>
-        <h2>Модель: @car.Name</h2>
-        <p>Цена: @car.Price.ToString("c")</p>
-    </div>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (var car in Model.AllCars)
+        {
+            <div class="col-lg-4">
+                <img src="@car.Img" alt="@car.Name" class="img-thumbnail" />
+                <h2>Модель: @car.Name</h2>
+                <p>@car.ShortDesc</p>
+                <p>Цена: @car.Price.ToString("c")</p>
+                <p><a href="#" class="btn btn-warning">Подробнее</a></p>
+            </div>
+        }
     }
-}
-
+</div>
