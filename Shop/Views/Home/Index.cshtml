@@ -5,7 +5,7 @@
     @{
         foreach (Car car in Model.FavCars)
         {
-            @Html.Partial("AllCars", car);
+            @await Html.PartialAsync("AllCars", car);
         }
     }
 </div>
