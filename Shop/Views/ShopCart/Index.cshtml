@@ -2,11 +2,11 @@
     <div class="container">
         @foreach (var el in Model.shopCart.ListShopItems)
         {
-        <div class="alert alert-warning mt-3">
-            <b>Автомобиль:</b> @el.CarItem.Name <br />
-            <b>Цена:</b> @el.Price.ToString("c") <br />
-        </div>
+            <div class="alert alert-warning mt-3">
+                <b>Автомобиль:</b> @el.CarItem.Name <br />
+                <b>Цена:</b> @el.Price.ToString("c") <br />
+            </div>
         }
-    <hr />
-    <div class="btn btn-danger" asp-controller="Order">Оплатить</div>
+        <hr />
+        <p><a class="btn btn-danger" asp-controller="Order" asp-action="Checkout">Оплатить</a> </p>
     </div>
